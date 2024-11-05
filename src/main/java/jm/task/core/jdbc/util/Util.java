@@ -6,9 +6,12 @@ import java.sql.SQLException;
 
 
     public class Util {
-        public Connection getConnection() {
+        public static final String URL = "jdbc:mysql://localhost:3306/preproject";
+        public static final String USERNAME = "root";
+        public static final String PASSWORD = "Vlad322";
+        public static Connection getConnection() {
             try {
-                return DriverManager.getConnection("jdbc:mysql://localhost:3306/preproject", "root", "Vlad322");
+                return DriverManager.getConnection(URL, USERNAME, PASSWORD);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
