@@ -60,8 +60,9 @@ public class User {
         this.age = age;
     }
 
+    @Override
     public String toString() {
-        return super.toString();
+        return getName() + " " + getLastName() + " " + getAge();
     }
 
 }
